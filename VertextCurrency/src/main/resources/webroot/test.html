@@ -8,9 +8,49 @@
 </head>
 
 <body>
+	<br>
+	<form class="form-inline">
+		<div class="form-group">
+		  <label for="idName">Name:</label>
+		  <input type="text" class="form-control" id="idName">
+		</div>
+		<div class="form-group">
+		  <label for="idNachname">Nachname:</label>
+		  <input type="text" class="form-control" id="idNachname">
+		</div>
+		<div class="form-group">
+		  <label for="idAlter">Alter:</label>
+		  <input type="text" class="form-control" id="idAlter">
+		</div>	
+		
+		<button type="button" class="btn btn-primary">Add</button>
+	</form>
 
+	<br>
 	<div class="container" ng-app="scoolapp">
+		<div ng-controller="controller1">
+			<table class="table table-hover">
+				<thead>
+					<th>Name</th>
+					<th>Nachname</th>
+					<th>Alter</th>
+				</thead>
+				<tbody>
+					<tr ng-repeat="contact in contacts">
+						<td>{{contact.name}}</td>
+						<td>{{contact.nachname}}</td>
+						<td>{{contact.alter}}</td>
+					</tr>
+				</tbody>
+			
+			</table>
+		</div>
+	</div>
 
+
+
+<!-- 
+	<div class="container" ng-app="scoolapp">
 		<div ng-controller="controller1">
 			<div class="row" ng-repeat="contact in contacts">
 				<div class="col-md-4">{{contact.name}}</div>
@@ -19,6 +59,7 @@
 			</div>
 		</div>
 	</div>
-
+ -->
+ 
 </body>
 </html>
